@@ -117,6 +117,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
+# Where `collectstatic` will collect static files for production / for tools that
+# expect a single static root path (django-distill checks this). Use a folder
+# inside the project's `public/` output directory so it's easy to serve.
+STATIC_ROOT = BASE_DIR / 'public' / 'static'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
